@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #adbbda;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+/* Hero section */
+.hero {
+    background-color: #ADBBDA;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary, .btn-outline {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-outline {
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.btn-primary:hover, .btn-outline:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* About section */
+.about {
+    padding: 80px 0;
+    background-color: #EDE8F5;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.skills {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.skills li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.skills li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 5px;
+    background-color: #007bff;
+}
+
+.skills li:nth-child(1)::after { width: 90%; }
+.skills li:nth-child(2)::after { width: 85%; }
+.skills li:nth-child(3)::after { width: 90%; }
+.skills li:nth-child(4)::after { width: 50%; }
+
+/* Education section */
+.education {
+    background-color: #ADBBDA;
+    padding: 80px 0;
+}
+
+.education h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 0 auto 40px;
+}
+
+.education-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.education-item {
+    background-color: #EDE8F5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.education-item h3 {
+    margin: 10px 0;
+}
+
+.resume-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Contact section */
+.contact {
+    padding: 80px 0;
+    background-color: #EDE8F5;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-item .icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #007bff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .navbar-collapse {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-collapse.show {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .education-content {
+        flex-direction: column;
+    }
+}
